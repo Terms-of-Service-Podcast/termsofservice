@@ -1,0 +1,25 @@
+{
+  "name": "termsofservice",
+  "version": "1.0.0",
+  "description": "Source code for the https://termsofservice.xyz/ website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy --input=src",
+    "dev": "npx @11ty/eleventy --input=src --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marycamacho/termsofservice.git"
+  },
+  "author": "Mary Camacho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marycamacho/termsofservice/issues"
+  },
+  "homepage": "https://github.com/marycamacho/termsofservice#readme",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
