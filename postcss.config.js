@@ -1,11 +1,12 @@
-module.exports = {
-  plugins: [
-      require('autoprefixer')({
-          grid: true,
-          overrideBrowserslist: ['defaults']
-      }),
-      require('cssnano')({
-          preset: 'default'
-      })
-  ]
-};
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+
+export const plugins = [
+  autoprefixer({
+    grid: true,
+    overrideBrowserslist: ['defaults']
+  }),
+  cssnano({
+    preset: 'default'
+  })
+];
