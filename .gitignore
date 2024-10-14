@@ -30,3 +30,7 @@ Thumbs.db
 *.ntvs*
 *.njsproj
 *.sln
+
+# My 11ty specifics
+client-side-compiled/
+styles-compiled/
