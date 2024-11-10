@@ -1,4 +1,6 @@
 import pluginWebc from "@11ty/eleventy-plugin-webc";
+import markdownItAttrs from "markdown-it-attrs";
+import markdownItFencedDivs from "@arothuis/markdown-it-fenced-divs";
 
 // If you have short codes
 //const registerShortCodes = require("./src/short-codes/");
@@ -23,6 +25,11 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginWebc);
   
+  eleventyConfig.amendLibrary("md", (md) => {
+    md.use(markdownItAttrs);
+    md.use(markdownItFencedDivs);
+  });
+
   // If you have short codes
   //registerShortCodes(eleventyConfig);
     
