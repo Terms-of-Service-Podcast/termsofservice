@@ -39,6 +39,7 @@
     "npm": ">=9.0.0",
     "yarn": ">=1.22.0"
   },
+  "packageManager": "yarn@1.22.22",
   "homepage": "https://github.com/marycamacho/termsofservice#readme",
   "type": "module",
   "devDependencies": {
