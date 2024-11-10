@@ -1,0 +1,8 @@
+---
+title: Home
+---
+<h1>The Terms of Service Podcast</h1>
+
+
+<h2>Latest Episode</h2>
+<episode-display :@episode="episodes.latest"></episode-display>

@@ -1,3 +1,4 @@
+import { EleventyRenderPlugin } from "@11ty/eleventy";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItFencedDivs from "@arothuis/markdown-it-fenced-divs";
@@ -23,7 +24,12 @@ export default function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setDataDeepMerge(false);
 
-  eleventyConfig.addPlugin(pluginWebc);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: [
+      "src/pages/_components/**/*.webc"
+    ] 
+  });
   
   eleventyConfig.amendLibrary("md", (md) => {
     md.use(markdownItAttrs);
