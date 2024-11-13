@@ -1,0 +1,33 @@
+<div class="contributor-bio" webc:root>
+  <div class="contributor-bio-avatar-and-name">
+    <div class="contributor-bio-avatar">
+      <img :src="avatarImgSrc"/>
+    </div>
+    <div class="contributor-bio-name">
+      <slot name="name"></slot>
+    </div>
+  </div>
+  <div class="contributor-bio-text-and-links">
+    <div class="contributor-bio-text">
+      <slot></slot>
+    </div>
+    <div class="contributor-bio-links">
+      <slot name="links"></slot>
+    </div>
+  </div>
+</div>
+
+<style>
+  .contributor-bio {
+    display: flex;
+    gap: 2em;
+  }
+
+  .contributor-bio.contributor-bio-right {
+    flex-direction: row-reverse;
+  }
+
+  .contributor-bio-name {
+    text-align: center;
+  }
+</style>

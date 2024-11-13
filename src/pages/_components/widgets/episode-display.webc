@@ -18,3 +18,25 @@
     <audio :src="episode.mp3Url" controls></audio>
   </div>
 </div>
+
+<style>
+  .episode-display {
+    margin: 2em 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: [col1-start] auto [col1-end] 1fr [cols-end];
+    grid-template-rows: [row1-start] repeat(5, auto) [rows-end]; 
+    column-gap: 4em;
+  }
+  
+  .episode-image {
+    grid-area: row1-start / col1-start / rows-end / col1-end;
+    img {
+      max-width: 300px;
+    }
+  }
+
+  .episode-meta {
+    grid-column: col1-end / cols-end;
+  }
+</style>

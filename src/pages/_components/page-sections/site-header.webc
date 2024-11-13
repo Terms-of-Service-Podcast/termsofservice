@@ -1,0 +1,26 @@
+<div id="site-header" class="page-section">
+  <div id="header-center-bar">
+    <site-logo></site-logo>
+    <site-nav></site-nav>
+  </div>
+</div>
+
+<style>
+  #site-header {
+    padding: 0;
+    padding-top: 1em;
+    background-image: url('/img/tos-water-strip.png');
+    /* filter: blur(15px); */
+  }
+
+  #header-center-bar {
+    display: flex;
+    justify-content: space-between;
+    background: var(--gradient-blue-hero);
+    
+    height: 1.5rem;
+    padding: 0.75rem var(--spacing-standard-horizontal-padding);
+  }
+
+  /* .site-logo { */
+</style>

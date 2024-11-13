@@ -1,0 +1,4 @@
+<div class="latest-episode page-section">
+  <h2>Latest Episode</h2>
+  <episode-display :@episode="episodes.latest"></episode-display>
+</div>
