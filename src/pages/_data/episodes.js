@@ -24,7 +24,7 @@ function parseFeed(feed) {
   const items = feed.items.map((item) => {
     return { 
       ...item,
-      description: item.content_html,
+      description: item.content_text.substring(0, 400),
       pubDateFormatted: format(new Date(item.date_published), "MMMM dd, yyyy"),
       mp3Url: item.attachments[0].url,
       duration: item.attachments[0].duration_in_seconds,
