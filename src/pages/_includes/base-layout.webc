@@ -15,5 +15,6 @@
   <site-footer></site-footer>
 
   <script webc:keep src="/scripts/index.js"></script>
+  <style @raw="getBundle('css')" webc:keep ></style>
 </body>
 </html>

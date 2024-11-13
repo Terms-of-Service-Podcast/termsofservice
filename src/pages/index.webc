@@ -4,9 +4,9 @@ title: Home
 
 <hero-section></hero-section>
 
+<subscribe-follow-section></subscribe-follow-section>
 
-<h2>Latest Episode</h2>
-<episode-display :@episode="episodes.latest"></episode-display>
+<latest-episode-section :@episodes="episodes"></latest-episode-section>
 
 <about-us-section></about-us-section>
 
