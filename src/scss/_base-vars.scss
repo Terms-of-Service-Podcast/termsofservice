@@ -16,6 +16,8 @@ $gradient-gray: linear-gradient(to right, $color-gray-1, $color-gray-2, $color-g
 // levels in the page hierarchy due to nesting.
 $spacing-standard-horizontal-padding: 5rem;
 
+$bg-image-blur-value: 10px;
+
 // project variables into css properties
 :root {
   --color-blue-1: #{$color-blue-1};
@@ -24,4 +26,5 @@ $spacing-standard-horizontal-padding: 5rem;
   --gradient-blue-hero: #{$gradient-blue-hero};
   --gradient-gray: #{$gradient-gray};
   --spacing-standard-horizontal-padding: #{$spacing-standard-horizontal-padding};
+  --bg-image-blur-value: #{$bg-image-blur-value};
 }

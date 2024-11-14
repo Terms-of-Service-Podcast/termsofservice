@@ -29,14 +29,15 @@
 
   #hero-section-bg {
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    /* messing with the top and height to get the blurry edges to not show */
+    top: -15px;
+    height: 105%;
     background-image: url('/img/tos-water-bg.png');
     background-size: cover;
     background-position: center;
-    filter: blur(10px);
+    filter: blur(var(--bg-image-blur-value));
     overflow: hidden;
   }
 
