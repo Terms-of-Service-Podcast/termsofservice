@@ -21,10 +21,16 @@
   .contributor-bio {
     display: flex;
     gap: 2em;
+    max-width: 90%;
   }
 
   .contributor-bio.contributor-bio-right {
     flex-direction: row-reverse;
+    align-self: flex-end;
+
+    .contributor-bio-text-and-links {
+      text-align: right;
+    }
   }
 
   .contributor-bio-name {

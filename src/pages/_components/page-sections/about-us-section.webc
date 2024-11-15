@@ -26,3 +26,9 @@
     </p>
   </div>
 </div>
+
+<style>
+  #about-us-section {
+    padding: 2rem 0;
+  }
+</style>
