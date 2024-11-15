@@ -18,6 +18,9 @@ $gradient-gray: linear-gradient(to right, $color-gray-1, $color-gray-2, $color-g
 // The left right margin is tricky because it will have to be applied at different 
 // levels in the page hierarchy due to nesting.
 $spacing-standard-horizontal-padding: 5rem;
+//This is the widest content width on any screen. There will be smaller 
+// content widths on smaller screens
+$spacing-max-content-width: 1200px;
 
 $bg-image-blur-value: 10px;
 
@@ -34,5 +37,6 @@ $bg-image-blur-value: 10px;
   --gradient-blue-hero: #{$gradient-blue-hero};
   --gradient-gray: #{$gradient-gray};
   --spacing-standard-horizontal-padding: #{$spacing-standard-horizontal-padding};
+  --spacing-max-content-width: #{$spacing-max-content-width};
   --bg-image-blur-value: #{$bg-image-blur-value};
 }

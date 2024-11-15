@@ -46,17 +46,19 @@
     position: relative;
     z-index: 1;
     text-align: center;
+    background-color: var(--color-blue-1);
   }
 
   #hero-section-text-container {
-    background-color: var(--color-blue-1);
+    max-width: var(--spacing-max-content-width);
+    margin: 0 auto;
   }
 
   #hero-section-text {
     text-align: left;
     max-width: 50%;
     color: var(--color-white);
-    padding: 1em var(--spacing-standard-horizontal-padding);
+    padding: 1em 0;
   }
 
   #hero-section-text h2 {
