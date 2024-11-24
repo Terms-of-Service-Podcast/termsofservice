@@ -21,7 +21,6 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    filter: blur(var(--bg-image-blur-value));
   }
 
   #header-center-bar-bg {
