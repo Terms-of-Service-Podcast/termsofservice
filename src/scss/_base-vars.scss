@@ -22,6 +22,12 @@ $spacing-standard-horizontal-padding: 5rem;
 // content widths on smaller screens
 $spacing-max-content-width: 1200px;
 
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1160px;
+
 $bg-image-blur-value: 10px;
 
 // project variables into css properties
@@ -39,4 +45,8 @@ $bg-image-blur-value: 10px;
   --spacing-standard-horizontal-padding: #{$spacing-standard-horizontal-padding};
   --spacing-max-content-width: #{$spacing-max-content-width};
   --bg-image-blur-value: #{$bg-image-blur-value};
+  --breakpoint-sm: #{$breakpoint-sm};
+  --breakpoint-md: #{$breakpoint-md};
+  --breakpoint-lg: #{$breakpoint-lg};
+  --breakpoint-xl: #{$breakpoint-xl};
 }

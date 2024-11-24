@@ -19,8 +19,9 @@
     </div>
   </div>
 
-  <img id="hero-section-hero-image" src="/img/mary-white-semicircle-transparent.png" alt="Mary Camacho">
-
+  <div id="hero-section-hero-image" >
+    <img src="/img/mary-white-semicircle-transparent.png" alt="Mary Camacho">
+  </div>
 </div>
 
 <style>
@@ -31,53 +32,96 @@
     grid-template-rows: [rows-start] auto [rows-end];
     overflow: hidden;
     max-height: 520px;
-  }
 
-  #hero-section-bg {
-    grid-area: rows-start / cols-start / rows-end / cols-end;
-    
-    width: 100%;
-    /* messing with the top and height to get the blurry edges to not show */    
-    height: 105%;
-    background-image: url('/img/tos-water-bg.png');
-    background-size: cover;
-    background-position: center;
-    filter: blur(var(--bg-image-blur-value));
-    overflow: hidden;
-  }
-
-  #hero-section-fg {
-    grid-area: rows-start / cols-start / rows-end / cols-end;
-    margin: 100px 0;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    background-color: var(--color-blue-1);
-  
-
-    #hero-section-text-container {
-      max-width: var(--spacing-max-content-width);
-      margin: 0 auto;
-
-      #hero-section-text {
-        text-align: left;
-        max-width: 50%;
-        color: var(--color-white);
-        padding: 1em 0;
+    #hero-section-bg {
+      grid-area: rows-start / cols-start / rows-end / cols-end;
       
+      width: 100%;
+      
+      background-image: url('/img/water-blurry-2kw.jpeg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
 
-        h2 {
+    #hero-section-fg {
+      grid-area: rows-start / cols-start / rows-end / cols-end;
+      margin: 100px 0;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      background-color: var(--color-blue-1);
+    
+
+      #hero-section-text-container {
+        max-width: var(--spacing-max-content-width);
+        margin: 0 auto;
+
+        #hero-section-text {
+          text-align: left;
+          max-width: 50%;
           color: var(--color-white);
+          padding: 1em 0;
+        
+
+          h2 {
+            color: var(--color-white);
+          }
         }
+      }
+    }
+
+    #hero-section-hero-image {
+      grid-area: rows-start / between-cols / rows-end / cols-end;
+      align-self: end;
+      max-width: 100%;
+      z-index: 2;
+
+      img {
+        width: 100%;
       }
     }
   }
 
-  #hero-section-hero-image {
-    grid-area: rows-start / between-cols / rows-end / cols-end;
-    align-self: end;
-    max-width: 100%;
-    z-index: 2;
+  /* breakpoint-md 768px*/
+  @media screen and (max-width: 768px) {
+    #hero-section.page-section {
+      max-height: none;
+      grid-template-columns: [cols-start] 1fr [cols-end];
+      grid-template-rows: [rows-start] auto auto [rows-end];
+      grid-template-areas: 
+        "heroimage"
+        "heroforeground";
+
+      #hero-section-bg {
+        grid-area: rows-start / cols-start / rows-end / cols-end;
+      }
+
+      #hero-section-fg {
+        grid-area: heroforeground;
+        margin: 0;
+
+        #hero-section-text-container {
+          max-width: var(--spacing-max-content-width);
+          margin: 0 auto;
+        
+          #hero-section-text {
+            max-width: none;
+          }
+        }
+      }
+
+      #hero-section-hero-image {
+        grid-area: heroimage;
+        margin: 2rem 0;
+        background-color: var(--color-blue-1);
+        img {
+          display: block;
+          width: 100%;
+          max-width: calc(var(--spacing-max-content-width) - 4rem);
+          margin: 0 auto;
+        }
+      }
+    }
   }
-  
 </style>

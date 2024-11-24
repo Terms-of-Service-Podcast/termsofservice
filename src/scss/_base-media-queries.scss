@@ -1,0 +1,30 @@
+@use 'base-vars';
+
+:root {
+  --spacing-max-content-width: calc(100vw - 15%);
+}
+
+// Media queries
+@media screen and (min-width: base-vars.$breakpoint-sm) {
+  :root {
+    // --spacing-max-content-width: 700px;
+  }
+}
+
+@media screen and (min-width: base-vars.$breakpoint-md) {
+  :root {
+    // --spacing-max-content-width: 900px;
+  }
+}
+
+@media screen and (min-width: base-vars.$breakpoint-lg) {
+  // :root {
+  //   --spacing-max-content-width: calc(100vw - 5%);
+  // }
+}
+
+@media screen and (min-width: base-vars.$breakpoint-xl) {
+  :root {
+    --spacing-max-content-width: 1200px;
+  }
+}
