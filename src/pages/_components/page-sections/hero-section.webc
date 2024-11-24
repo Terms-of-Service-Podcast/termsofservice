@@ -26,23 +26,26 @@
     </svg>
     
     <img id="hero-section-hero-image" src="/img/mary-stairs-transparent.png" alt="Mary Camacho">
+    <!-- <img id="hero-section-hero-image" src="/img/mary-white-semicircle-transparent.png" alt="Mary Camacho"> -->
   </div>
 </div>
 
 <style>
   #hero-section.page-section {
     padding: 0;
-    position: relative;
+    display: grid;
+    grid-template-columns: [cols-start] 1fr [between-cols] 400px [cols-end];
+    grid-template-rows: [rows-start] auto [rows-end];
     overflow: hidden;
     max-height: 520px;
   }
 
   #hero-section-bg {
-    position: absolute;
-    left: 0;
+    grid-area: rows-start / cols-start / rows-end / cols-end;
+    
     width: 100%;
     /* messing with the top and height to get the blurry edges to not show */
-    top: -15px;
+    
     height: 105%;
     background-image: url('/img/tos-water-bg.png');
     background-size: cover;
@@ -52,39 +55,42 @@
   }
 
   #hero-section-fg {
+    grid-area: rows-start / cols-start / rows-end / cols-end;
     margin: 100px 0;
     position: relative;
     z-index: 1;
     text-align: center;
     background-color: var(--color-blue-1);
-  }
+  
 
-  #hero-section-text-container {
-    max-width: var(--spacing-max-content-width);
-    margin: 0 auto;
+    #hero-section-text-container {
+      max-width: var(--spacing-max-content-width);
+      margin: 0 auto;
 
-    #hero-section-text {
-      text-align: left;
-      max-width: 50%;
-      color: var(--color-white);
-      padding: 1em 0;
-    
-
-      h2 {
+      #hero-section-text {
+        text-align: left;
+        max-width: 50%;
         color: var(--color-white);
+        padding: 1em 0;
+      
+
+        h2 {
+          color: var(--color-white);
+        }
       }
     }
   }
 
   #hero-section-hero-image-container {
+    grid-area: rows-start / between-cols / rows-end / cols-end;
     border: 1px solid red;
     display: grid;
     grid-template-columns: [cols-start] 1fr [cols-end]; 
     grid-template-rows: [rows-start] auto [rows-end];
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
-    width: 30%;
+    /* width: 30%; */
     height: 100%;
     max-height: 520px;
     z-index: 1;
@@ -107,7 +113,7 @@
 
     #hero-section-hero-image {
       grid-area: rows-start / cols-start / rows-end / cols-end;
-      visibility: hidden;
+      /* visibility: hidden; */
       /* position: absolute; */
       /* position: relative; */
       /* bottom: 0; */
