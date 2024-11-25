@@ -9,11 +9,10 @@
 </div>
 
 <style>
-  #site-header {
-    position: relative;
-    padding: 0;
-    height: 4rem;
-  }
+#site-header {
+  position: relative;
+  padding: 0;
+  height: 4rem;
 
   #header-center-bar-top-bg {
     height: 30px;
@@ -25,7 +24,6 @@
 
   #header-center-bar-bg {
     background: var(--gradient-blue-hero);
-
   }
 
   #header-center-bar {
@@ -40,5 +38,6 @@
     max-width: var(--spacing-max-content-width);
     margin-top: -10px;
   }
+}
 
 </style>

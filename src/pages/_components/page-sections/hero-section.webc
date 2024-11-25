@@ -59,7 +59,7 @@
 
         #hero-section-text {
           text-align: left;
-          max-width: 50%;
+          max-width: calc(var(--spacing-max-content-width) - 500px);
           color: var(--color-white);
           padding: 1em 0;
         
