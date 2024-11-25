@@ -61,18 +61,20 @@
 </div>
 
 <style>
-  #behind-the-mic {
-    background-color: var(--color-white);
-    padding: 1rem 0;
-  }
+#behind-the-mic {
+  background-color: var(--color-white);
+  padding: 1rem 0;
 
-  #behind-the-mic .section-container {
+  .section-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
   
-  #behind-the-mic .contributor-bio .contributor-bio-links .contributor-bio-link-icon {
-    height: 1.5rem;
+  .contributor-bio { 
+    .contributor-bio-links .contributor-bio-link-icon {
+      height: 1.5rem;
+    }
   } 
+}
 </style>

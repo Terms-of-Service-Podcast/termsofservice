@@ -18,13 +18,12 @@
 </div>
 
 <style>
-  .contributor-bio {
-    display: flex;
-    gap: 2em;
-    max-width: 90%;
-  }
+.contributor-bio {
+  display: flex;
+  gap: 2em;
+  max-width: 90%;
 
-  .contributor-bio.contributor-bio-right {
+  &.contributor-bio-right {
     flex-direction: row-reverse;
     align-self: flex-end;
 
@@ -36,4 +35,23 @@
   .contributor-bio-name {
     text-align: center;
   }
+
+  /* breakpoint-md 768px*/
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 2rem;
+
+    &.contributor-bio-right {
+      flex-direction: column;
+      align-self: center;
+
+      .contributor-bio-text-and-links {
+        text-align: left;
+      }
+    }
+  }
+}
 </style>
