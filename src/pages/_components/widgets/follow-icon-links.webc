@@ -1,0 +1,21 @@
+<template webc:root class="follow-icon-links">
+  <a href="https://www.linkedin.com/company/podcast-terms-of-service" target="_blank" rel="noopener noreferrer">
+    <img class="follow-link-icon" src="/img/icons/linkedin-shaded-icon.png" alt="LinkedIn">
+  </a>
+
+  <a href="https://www.instagram.com/termsofservicepod/" target="_blank" rel="noopener noreferrer">
+    <img class="follow-link-icon" src="/img/icons/instagram-shaded-icon.png" alt="Instagram">
+  </a>
+  
+  <a href="https://www.tiktok.com/@terms.of.service.podcast" target="_blank" rel="noopener noreferrer">
+    <img class="follow-link-icon" src="/img/icons/tiktok-shaded-icon.png" alt="Instagram">
+  </a>
+</template>
+
+<style>
+.follow-icon-links {
+  a {
+    text-decoration: none;
+  }
+}
+</style>
