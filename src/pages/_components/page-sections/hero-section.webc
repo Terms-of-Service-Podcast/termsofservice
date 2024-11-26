@@ -31,7 +31,6 @@
     grid-template-columns: [cols-start] 1fr [between-cols] 500px [cols-end];
     grid-template-rows: [rows-start] auto [rows-end];
     overflow: hidden;
-    max-height: 520px;
 
     #hero-section-bg {
       grid-area: rows-start / cols-start / rows-end / cols-end;
@@ -63,7 +62,6 @@
           color: var(--color-white);
           padding: 1em 0;
         
-
           h2 {
             color: var(--color-white);
           }
@@ -79,6 +77,8 @@
 
       img {
         width: 100%;
+        vertical-align: bottom;
+        margin-left: +15px;
       }
     }
   }
