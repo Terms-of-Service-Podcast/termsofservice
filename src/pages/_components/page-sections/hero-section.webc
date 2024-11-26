@@ -1,0 +1,127 @@
+<div id="hero-section" class="page-section">
+  <div id="hero-section-bg"></div>
+  <div id="hero-section-fg">
+    <div id="hero-section-text-container">
+      <div id="hero-section-text">
+        <h2 class="no-line">Welcome</h2>
+        <h3>Thanks for jumping into conversation</h3>
+        <p>
+          We’re going to dive deep into the fine print of our digital lives. 
+          We’ll chat with the people who write the code, the contracts and 
+          the policies that effect our experiences online.
+        </p>
+          Our hope is that these conversations make sense to everyone who is 
+          a user of the Internet. Our goal is that you feel more informed about 
+          the choices you make when you interact online with tech, with brands, 
+          and with each other. 
+        <p>
+      </div>
+    </div>
+  </div>
+
+  <div id="hero-section-hero-image" >
+    <img src="/img/mary-white-semicircle-transparent.png" alt="Mary Camacho">
+  </div>
+</div>
+
+<style>
+  #hero-section.page-section {
+    padding: 0;
+    display: grid;
+    grid-template-columns: [cols-start] 1fr [between-cols] 500px [cols-end];
+    grid-template-rows: [rows-start] auto [rows-end];
+    overflow: hidden;
+
+    #hero-section-bg {
+      grid-area: rows-start / cols-start / rows-end / cols-end;
+      
+      width: 100%;
+      
+      background-image: url('/img/water-blurry-2kw.jpeg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    #hero-section-fg {
+      grid-area: rows-start / cols-start / rows-end / cols-end;
+      margin: 100px 0;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      background-color: var(--color-blue-1);
+    
+
+      #hero-section-text-container {
+        max-width: var(--spacing-max-content-width);
+        margin: 0 auto;
+
+        #hero-section-text {
+          text-align: left;
+          max-width: calc(var(--spacing-max-content-width) - 500px);
+          color: var(--color-white);
+          padding: 1em 0;
+        
+          h2 {
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+
+    #hero-section-hero-image {
+      grid-area: rows-start / between-cols / rows-end / cols-end;
+      align-self: end;
+      max-width: 100%;
+      z-index: 2;
+
+      img {
+        width: 100%;
+        vertical-align: bottom;
+        margin-left: +15px;
+      }
+    }
+  }
+
+  /* breakpoint-md 768px*/
+  @media screen and (max-width: 768px) {
+    #hero-section.page-section {
+      max-height: none;
+      grid-template-columns: [cols-start] 1fr [cols-end];
+      grid-template-rows: [rows-start] auto auto [rows-end];
+      grid-template-areas: 
+        "heroimage"
+        "heroforeground";
+
+      #hero-section-bg {
+        grid-area: rows-start / cols-start / rows-end / cols-end;
+      }
+
+      #hero-section-fg {
+        grid-area: heroforeground;
+        margin: 0;
+
+        #hero-section-text-container {
+          max-width: var(--spacing-max-content-width);
+          margin: 0 auto;
+        
+          #hero-section-text {
+            max-width: none;
+          }
+        }
+      }
+
+      #hero-section-hero-image {
+        grid-area: heroimage;
+        margin: 2rem 0;
+        background-color: var(--color-blue-1);
+        img {
+          display: block;
+          width: 100%;
+          max-width: calc(var(--spacing-max-content-width) - 4rem);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+</style>

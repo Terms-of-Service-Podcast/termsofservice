@@ -1,0 +1,47 @@
+<div class="episode-display">
+  <div class="episode-image">
+    <img src="/img/tos-episode-image.png">
+  </div>
+  
+  <h2 @text="episode.title"></h2>
+  <div class="episode-meta">
+    <span class="episode-date" @text="episode.pubDateFormatted"></span>
+    <span> | </span>
+    <span class="episode-duration" @text="episode.durationFormatted"></span>
+  </div>
+  <div class="episode-description" @raw="episode.description"></div>
+  <div class="episode-link">
+    <a :href="episode.mp3Url" target="_blank" >MP3</a>
+  </div>
+
+  <div class="episode-player">
+    <audio :src="episode.mp3Url" controls></audio>
+  </div>
+</div>
+
+<style>
+.episode-display {
+  margin: 2em 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: [col1-start] auto [col1-end col2-start] 1fr [col2-end];
+  grid-template-rows: [row1-start] repeat(5, auto) [rows-end]; 
+  column-gap: 4em;
+  
+  .episode-image {
+    grid-area: row1-start / col1-start / rows-end / col1-end;
+    img {
+      max-width: 300px;
+    }
+  }
+
+  .episode-meta {
+    grid-column: col2-start / col2-end;
+  }
+
+  /* breakpoint-md 768px*/
+  @media screen and (max-width: 768px) {
+    grid-template-columns: [col1-start col2-start] auto [col1-end col2-end];
+  }
+}
+</style>

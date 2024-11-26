@@ -1,0 +1,18 @@
+<div class="site-nav">
+  <a href="/">Home</a>
+  <a href="/episodes">Episodes</a>
+  <a href="/about">About</a>
+</div>
+
+<style>
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .site-nav a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+</style>

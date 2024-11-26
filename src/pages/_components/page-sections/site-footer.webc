@@ -1,0 +1,35 @@
+<div id="site-footer" class="page-section">
+  <div class="section-container">
+    <div class="copyright-notice">
+      &copy; Mary Camacho <current-year></current-year>
+    </div>
+    <site-bottom-nav></site-bottom-nav>
+    <div class="footer-follow-section">
+      <a href="https://www.linkedin.com/company/podcast-terms-of-service">
+        <img class="follow-section-icon" src="/img/icons/linkedin-shaded-icon.png" alt="LinkedIn">
+      </a>
+
+      <a href="https://www.instagram.com/termsofservicepod/">
+        <img class="follow-section-icon" src="/img/icons/instagram-shaded-icon.png" alt="Instagram">
+      </a>
+      
+      <a href="https://www.tiktok.com/@terms.of.service.podcast">
+        <img class="follow-section-icon" src="/img/icons/tiktok-shaded-icon.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  #site-footer .section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .footer-follow-section {
+    display: flex;
+    align-items: center;
+  }
+</style>

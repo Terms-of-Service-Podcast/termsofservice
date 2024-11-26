@@ -1,0 +1,43 @@
+<div id="site-header" class="page-section" webc:root>
+  <div id="header-center-bar-top-bg"></div>
+  <div id="header-center-bar-bg">
+    <div id="header-center-bar">
+      <site-logo></site-logo>
+      <site-nav></site-nav>
+    </div>
+  </div>
+</div>
+
+<style>
+#site-header {
+  position: relative;
+  padding: 0;
+  height: 4rem;
+
+  #header-center-bar-top-bg {
+    height: 30px;
+    background-image: url('/img/water-blurry-2kw.jpeg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  #header-center-bar-bg {
+    background: var(--gradient-blue-hero);
+  }
+
+  #header-center-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+    z-index: 1;
+    height: 3rem;
+    padding: 0.75rem 0;
+    margin: 0 auto;
+    max-width: var(--spacing-max-content-width);
+    margin-top: -10px;
+  }
+}
+
+</style>

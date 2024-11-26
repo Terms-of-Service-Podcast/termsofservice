@@ -1,0 +1,80 @@
+<div id="behind-the-mic" class="page-section">
+  <div class="section-container">
+    <h2>Behind the Mic</h2>
+    
+    <contributor-bio avatar-img-src="/img/mary200circle.png">
+      <h3 slot="name">Mary Camacho</h3>
+      <div slot="links">
+        <a href="https://www.linkedin.com/in/maryfcamacho/" rel="noopener noreferrer" target="_blank">
+          <img src="/img/linkedin-logo.png" alt="LinkedIn" class="contributor-bio-link-icon" />
+        </a>
+      </div>
+      <p>
+        Co-founder of Holochain, and CEO of Holo, Mary leads the development of 
+        peer-to-peer and decentralised technologies that empower users and redefine 
+        digital interactions. With over 20 years in tech and telecom, her career has 
+        been dedicated to enhancing user control, privacy, and digital autonomy.
+      </p>
+      <p>
+        Mary's educational background as a social scientist grounds the explorations 
+        at intersection of sociality and technology, exposing the trade-offs in 
+        privacy, security, and agency inherent in our digital choices. 
+        On “Terms of Service,” she invites listeners to rethink these everyday 
+        interactions and the broader implications of AI, distributed tech, 
+        and legal frameworks on our digital lives, advocating for a future where 
+        individuals have greater control over their data and decisions.
+      </p>
+    </contributor-bio>
+
+    <contributor-bio avatar-img-src="/img/nicole200circle.png" class="contributor-bio-right">
+      <h3 slot="name">Nicole Klau Ibarra</h3>
+      <div slot="links">
+        <a href="https://www.linkedin.com/in/nicole-klau-ibarra-b26818137/" rel="noopener noreferrer">
+          <img src="/img/linkedin-logo.png" alt="LinkedIn" class="contributor-bio-link-icon" />
+        </a>
+      </div>
+      <p>
+        Nicole is a visionary entrepreneur with a diverse background, she is passionate 
+        about social system design and has helped multiple ventures, Including the IKIGAI 
+        Project, her non-profit helping people build essential 21st-century skills - many 
+        of which intersect with the topics discussed in Terms Of Service.
+      </p>
+    </contributor-bio>
+
+    <contributor-bio avatar-img-src="/img/arthur200circle.png">
+      <h3 slot="name">Arthur Vincent</h3>
+      <div slot="links">
+        <a href="https://www.linkedin.com/in/arthur-vincent/" rel="noopener noreferrer" target="_blank">
+          <img src="/img/linkedin-logo.png" alt="LinkedIn" class="contributor-bio-link-icon" />
+        </a>
+      </div>
+      <p>
+        Arthur Vincent is a seasoned Music and Audio Producer with a passion for pushing 
+        the boundaries of music technology. As a music producer and sound designer, 
+        he has crafted innovative audio experiences for global brands like Heineken, 
+        Philips, and Cupra. Alongside his creative work, Arthur is also an expert in 
+        audio technology, mastering both hardware and software tools to deliver 
+        high-quality, immersive sound.
+      </p>
+    </contributor-bio>
+  </div>
+</div>
+
+<style>
+#behind-the-mic {
+  background-color: var(--color-white);
+  padding: 1rem 0;
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contributor-bio { 
+    .contributor-bio-links .contributor-bio-link-icon {
+      height: 1.5rem;
+    }
+  } 
+}
+</style>

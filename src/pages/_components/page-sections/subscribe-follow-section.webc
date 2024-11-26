@@ -1,0 +1,60 @@
+<div id="subscribe-follow-section" class="page-section">
+  <div class="section-container">
+    <div id="subscribe-follow-section-subscribe">
+      <div class="subscribe-section-label">Subscribe:</div>
+      <a href="https://podcasts.apple.com/us/podcast/the-terms-of-service-podcast/id1774517287">
+        <img class="subscribe-section-icon" src="/img/icons/itunes-square.png" alt="iTunes">
+      </a>
+      <a href="https://open.spotify.com/show/1OHsoeF5UugkdEAN6r04W4">
+        <img class="subscribe-section-icon" src="/img/icons/spotify.png" alt="Spotify">
+      </a>
+      <a href="https://pca.st/podcast/940c4540-6ec7-013d-4cae-0affd1ac52c3">
+        <img class="subscribe-section-icon" src="/img/icons/pocketcast-tiny.png" alt="Pocket Casts">
+      </a>
+      <a href="https://podcast.termsofservice.xyz/rss/">
+        <img class="subscribe-section-icon" src="/img/icons/rss.png" alt="RSS">
+      </a>
+    </div>
+    <div id="subscribe-follow-section-follow">
+      <div class="follow-section-label">Follow:</div>
+      <a href="https://www.linkedin.com/company/podcast-terms-of-service">
+        <img class="follow-section-icon" src="/img/icons/linkedin-shaded-icon.png" alt="LinkedIn">
+      </a>
+
+      <a href="https://www.instagram.com/termsofservicepod/">
+        <img class="follow-section-icon" src="/img/icons/instagram-shaded-icon.png" alt="Instagram">
+      </a>
+      
+      <a href="https://www.tiktok.com/@terms.of.service.podcast">
+        <img class="follow-section-icon" src="/img/icons/tiktok-shaded-icon.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  #subscribe-follow-section {
+    padding: 1rem 0;
+  }
+
+  #subscribe-follow-section .section-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #subscribe-follow-section-subscribe, #subscribe-follow-section-follow {
+    display: flex;
+    align-items: center;
+  }
+
+  .subscribe-section-label, .follow-section-label {
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+  }
+
+  .subscribe-section-icon, .follow-section-icon {
+    height: 1.5rem;
+    margin: 0 .5rem;
+  }
+  
+</style>
