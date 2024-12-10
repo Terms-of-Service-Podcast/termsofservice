@@ -26,6 +26,7 @@ function parseFeed(feed) {
       ...item,
       description: item.content_text.substring(0, 400),
       pubDateFormatted: format(new Date(item.date_published), "MMMM dd, yyyy"),
+      pageSlug: format(new Date(item.date_published), "MM-dd-yyyy"),
       mp3Url: item.attachments[0].url,
       duration: item.attachments[0].duration_in_seconds,
       durationFormatted: formatDuration(item.attachments[0].duration_in_seconds)

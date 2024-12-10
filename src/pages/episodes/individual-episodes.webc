@@ -1,0 +1,15 @@
+---js
+{
+  pagination: {
+    data: 'episodes.items',
+    size: 1,
+    alias: 'episode',
+  },
+  permalink: ({episode}) => {
+    console.log(episode.pageSlug); 
+    return `episodes/${episode.pageSlug}/index.html`; 
+  }
+}
+---
+
+<h1 @text="episode.title"></h1>
