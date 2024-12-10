@@ -1,0 +1,11 @@
+---
+title: Episodes
+---
+
+<div class="episodes page-section">
+  <div class="section-container">
+    <h1> Episodes</h1>
+
+    <episode-brief-display webc:for="item of episodes.items" :@episode="item"></episode-brief-display>
+  </div>
+</div>

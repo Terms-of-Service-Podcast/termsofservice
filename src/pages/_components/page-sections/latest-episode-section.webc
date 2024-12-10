@@ -1,6 +1,6 @@
 <div class="latest-episode page-section">
   <div class="section-container">
     <h2>Latest Episode</h2>
-    <episode-display :@episode="episodes.latest"></episode-display>
+    <episode-brief-display :@episode="episodes.latest"></episode-brief-display>
   </div>
 </div>
