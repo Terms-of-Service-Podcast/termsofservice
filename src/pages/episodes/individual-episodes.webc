@@ -27,7 +27,7 @@
           <span> | </span>
           <span class="episode-duration" @text="episode.durationFormatted"></span>
         </div>
-        <div class="episode-description" @raw="episode.description"></div>
+        
         <div class="episode-download-link">
           <a :href="episode.mp3Url" target="_blank" >MP3</a>
         </div>
@@ -36,6 +36,11 @@
           <audio :src="episode.mp3Url" controls></audio>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="individual-episode-body page-section">
+    <div class="section-container">
+      <div class="episode-description" @raw="episode.fullContent"></div>
     </div>
   </div>
 </div>
