@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +16,22 @@ body {
   font-weight: 400;
   font-size: 1em;
   background-color: var(--color-gray-4);
+
+  // Sets up to ensure the footer is always at the bottom of the page
+  display: flex;
+  flex-direction: column;
 }
+
+// Ensure the footer is always at the bottom of the page
+#page-content {
+  flex: 1 0 auto;
+}
+
+site-footer {
+  flex-shrink: 0;
+}
+
+// End ensure footer is always at the bottom of the page
 
 .page-section {
   padding: 0;
