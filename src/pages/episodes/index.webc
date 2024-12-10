@@ -2,10 +2,10 @@
 title: Episodes
 ---
 
-<div webc:for="item of episodes.items" class="episodes page-section">
+<div class="episodes page-section">
   <div class="section-container">
     <h1> Episodes</h1>
 
-    <episode-display :@episode="item"></episode-display>
+    <episode-display webc:for="item of episodes.items" :@episode="item"></episode-display>
   </div>
 </div>

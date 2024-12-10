@@ -1,6 +1,6 @@
 <div class="episode-display">
   <div class="episode-image">
-    <img src="/img/tos-episode-image.png">
+    <img :src="episode.image">
   </div>
   
   <h2 @text="episode.title"></h2>
@@ -10,7 +10,7 @@
     <span class="episode-duration" @text="episode.durationFormatted"></span>
   </div>
   <div class="episode-description" @raw="episode.description"></div>
-  <div class="episode-link">
+  <div class="episode-download-link">
     <a :href="episode.mp3Url" target="_blank" >MP3</a>
   </div>
 
