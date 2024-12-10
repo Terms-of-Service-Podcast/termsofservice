@@ -1,4 +1,4 @@
-<div class="episode-display">
+<div class="episode-brief-display">
   <div class="episode-image">
     <img :src="episode.image">
   </div>
@@ -20,7 +20,7 @@
 </div>
 
 <style>
-.episode-display {
+.episode-brief-display {
   margin: 2em 0;
   display: grid;
   width: 100%;
