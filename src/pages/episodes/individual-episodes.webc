@@ -73,6 +73,17 @@
         grid-column: col2-start / col2-end;
       }
 
+      .episode-player {
+        audio {
+          border: solid 1px var(--color-gray-2);
+          border-radius: 100px;
+        }
+          
+        audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-panel {
+          background-color: #fff;
+        }
+      }
+
       /* breakpoint-md 768px*/
       @media screen and (max-width: 768px) {
         grid-template-columns: [col1-start col2-start] auto [col1-end col2-end];
