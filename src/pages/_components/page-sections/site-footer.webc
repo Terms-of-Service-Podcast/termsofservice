@@ -13,7 +13,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 2rem 0;
+  gap: 1rem;
 
   .footer-follow-section {
     display: flex;
@@ -24,6 +26,13 @@
       height: 1.5rem;
       margin: 0 .5rem;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #site-footer .section-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>

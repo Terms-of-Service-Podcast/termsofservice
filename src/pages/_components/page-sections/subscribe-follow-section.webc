@@ -29,6 +29,8 @@
   .section-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     #subscribe-follow-section-subscribe, #subscribe-follow-section-follow {
       display: flex;
