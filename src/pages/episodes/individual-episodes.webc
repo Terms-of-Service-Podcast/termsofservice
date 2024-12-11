@@ -35,6 +35,9 @@
 
     </div>
   </div>
+
+  <subscribe-follow-section webc:nokeep></subscribe-follow-section>
+  
   <div class="individual-episode-body page-section">
     <div class="section-container">
       <div class="episode-description" @raw="episode.fullContent"></div>
@@ -82,11 +85,11 @@
           background-color: #fff;
         }
       }
-    }
     
-    /* breakpoint-md 768px*/
-    @media screen and (max-width: 768px) {
-      grid-template-columns: [col1-start col2-start] auto [col1-end col2-end];
+      /* breakpoint-md 768px*/
+      @media screen and (max-width: 768px) {
+        grid-template-columns: [col1-start col2-start] auto [col1-end col2-end];
+      }
     }
   }
 }
