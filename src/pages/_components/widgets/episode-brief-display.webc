@@ -31,6 +31,9 @@
   grid-template-rows: [row1-start] repeat(5, auto) [rows-end]; 
   column-gap: 4em;
   
+  h2 {
+    color: black;
+  }
 
   .episode-link {
     text-decoration: none;
