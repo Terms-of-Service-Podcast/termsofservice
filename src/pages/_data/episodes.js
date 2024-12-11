@@ -22,9 +22,13 @@ function formatDuration(seconds) {
 function parseFeed(feed) {
   //console.log("Parsing episodes", feed.items);
   const items = feed.items.map((item) => {
+    const descriptionBrief = item.content_text.substring(0, 400);
+    const isDescriptionTruncated = descriptionBrief.length < item.content_text.length;
+
     return { 
       ...item,
-      description: item.content_text.substring(0, 400),
+      descriptionBrief,
+      isDescriptionTruncated,
       fullContent: item.content_html,
       pubDateFormatted: format(new Date(item.date_published), "MMMM dd, yyyy"),
       pageSlug: format(new Date(item.date_published), "MM-dd-yyyy"),
@@ -45,6 +49,8 @@ function parseFeed(feed) {
 export default async function () {
   //console.log("Fetching episodes");
   const feed = await readFeed(feedUrl);
-  // console.log("Done fetching episodes", JSON.stringify(feed, null, 2));
-  return parseFeed(feed);
+  const parseResults = parseFeed(feed);
+  console.log("Done fetching episodes", JSON.stringify(parseResults, null, 2));
+
+  return parseResults;
 }

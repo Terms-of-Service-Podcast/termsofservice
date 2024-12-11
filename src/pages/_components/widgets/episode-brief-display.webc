@@ -13,7 +13,10 @@
     <span class="episode-duration" @text="episode.durationFormatted"></span>
     <a :href="episode.mp3Url" target="_blank" class="episode-download-link">MP3</a>
   </div>
-  <div class="episode-description" @raw="episode.description"></div>
+  <div class="episode-description">
+    <span @raw="episode.descriptionBrief"></span>
+    <a :href="`/episodes/${episode.pageSlug}/`" webc:if="episode.isDescriptionTruncated" class="there-more-link" title="Read more on episode page">...</a>
+  </div>
   
 
 
@@ -38,7 +41,14 @@
   .episode-link {
     text-decoration: none;
   }
-  
+
+  .episode-description {
+    .there-more-link {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
   .episode-download-link {
     margin-left: 2rem;
   }
