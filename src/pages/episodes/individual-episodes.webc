@@ -6,7 +6,6 @@
     alias: 'episode',
   },
   permalink: ({episode}) => {
-    console.log(episode.pageSlug); 
     return `episodes/${episode.pageSlug}/index.html`; 
   }
 }

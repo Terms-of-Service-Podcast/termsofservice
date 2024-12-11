@@ -1,9 +1,9 @@
 <div class="episode-brief-display">
-  <a :href="`/episodes/${episode.pageSlug}/`" class="episode-image episode-link">
+  <a :href="`/episodes/${episode.pageSlug}`" class="episode-image episode-link">
     <img :src="episode.image">
   </a>
   
-  <a :href="`/episodes/${episode.pageSlug}/`" class="episode-link">
+  <a :href="`/episodes/${episode.pageSlug}`" class="episode-link">
     <h2 @text="episode.title"></h2>
   </a>
 
@@ -15,7 +15,7 @@
   </div>
   <div class="episode-description">
     <span @raw="episode.descriptionBrief"></span>
-    <a :href="`/episodes/${episode.pageSlug}/`" webc:if="episode.isDescriptionTruncated" class="there-more-link" title="Read more on episode page">...</a>
+    <a :href="`/episodes/${episode.pageSlug}`" webc:if="episode.isDescriptionTruncated" class="there-more-link" title="Read more on episode page">...</a>
   </div>
   
 

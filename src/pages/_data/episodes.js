@@ -24,6 +24,9 @@ function parseFeed(feed) {
   const items = feed.items.map((item) => {
     const descriptionBrief = item.content_text.substring(0, 400);
     const isDescriptionTruncated = descriptionBrief.length < item.content_text.length;
+    const slugBase = item._microfeed.web_url;
+    const secondToLastSlashInSlugBase = slugBase.lastIndexOf("/", slugBase.lastIndexOf("/") - 1);
+    const pageSlug = slugBase.substring(secondToLastSlashInSlugBase + 1);
 
     return { 
       ...item,
@@ -31,7 +34,7 @@ function parseFeed(feed) {
       isDescriptionTruncated,
       fullContent: item.content_html,
       pubDateFormatted: format(new Date(item.date_published), "MMMM dd, yyyy"),
-      pageSlug: format(new Date(item.date_published), "MM-dd-yyyy"),
+      pageSlug,
       mp3Url: item.attachments[0].url,
       duration: item.attachments[0].duration_in_seconds,
       durationFormatted: formatDuration(item.attachments[0].duration_in_seconds)
@@ -47,10 +50,8 @@ function parseFeed(feed) {
 }
 
 export default async function () {
-  //console.log("Fetching episodes");
   const feed = await readFeed(feedUrl);
   const parseResults = parseFeed(feed);
-  console.log("Done fetching episodes", JSON.stringify(parseResults, null, 2));
 
   return parseResults;
 }
