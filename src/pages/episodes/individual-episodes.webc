@@ -15,27 +15,24 @@
 <div class="individual-episode">
   <div class="individual-episode-top page-section">
     <div class="section-container">
-      <div class="episode-brief-display">
-        <div  class="episode-image">
-          <img :src="episode.image">
-        </div>
-        
-        <h1 @text="episode.title"></h1>
       
-        <div class="episode-meta">
-          <span class="episode-date" @text="episode.pubDateFormatted"></span>
-          <span> | </span>
-          <span class="episode-duration" @text="episode.durationFormatted"></span>
-        </div>
-        
-        <div class="episode-download-link">
-          <a :href="episode.mp3Url" target="_blank" >MP3</a>
-        </div>
-      
-        <div class="episode-player">
-          <audio :src="episode.mp3Url" controls></audio>
-        </div>
+      <div  class="episode-image">
+        <img :src="episode.image">
       </div>
+      
+      <h1 @text="episode.title"></h1>
+    
+      <div class="episode-meta">
+        <span class="episode-date" @text="episode.pubDateFormatted"></span>
+        <span> | </span>
+        <span class="episode-duration" @text="episode.durationFormatted"></span>
+        <a :href="episode.mp3Url" target="_blank" class="episode-download-link">Download MP3</a>
+      </div>
+    
+      <div class="episode-player">
+        <audio :src="episode.mp3Url" controls></audio>
+      </div>
+
     </div>
   </div>
   <div class="individual-episode-body page-section">
@@ -48,22 +45,22 @@
 <style>
 .individual-episode {
   .individual-episode-top {
-    .episode-brief-display {
-      margin: 2em 0;
+    .section-container {
+      margin-top: 2em;
+      margin-bottom: 2em;
       display: grid;
       width: 100%;
       grid-template-columns: [col1-start] auto [col1-end col2-start] 1fr [col2-end];
       grid-template-rows: [row1-start] repeat(5, auto) [rows-end]; 
-      column-gap: 4em;
+      gap: 0.5rem 2rem;
       
-
-      .episode-link {
-        text-decoration: none;
-        color: inherit;
+      .episode-download-link {
+        margin-left: 2rem;
       }
       
       .episode-image {
         grid-area: row1-start / col1-start / rows-end / col1-end;
+        
         img {
           max-width: 300px;
         }
@@ -71,9 +68,11 @@
 
       .episode-meta {
         grid-column: col2-start / col2-end;
+        margin-bottom: 1rem;
       }
 
       .episode-player {
+
         audio {
           border: solid 1px var(--color-gray-2);
           border-radius: 100px;
@@ -83,11 +82,10 @@
           background-color: #fff;
         }
       }
-
-      /* breakpoint-md 768px*/
-      @media screen and (max-width: 768px) {
-        grid-template-columns: [col1-start col2-start] auto [col1-end col2-end];
-      }
+  }
+    /* breakpoint-md 768px*/
+    @media screen and (max-width: 768px) {
+      grid-template-columns: [col1-start col2-start] auto [col1-end col2-end];
     }
   }
 }
