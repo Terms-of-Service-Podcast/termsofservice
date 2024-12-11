@@ -1,7 +1,7 @@
 <div class="site-bottom-nav">
   <a href="/episodes">Episodes</a>
   <a href="mailto:info@termsofservice.xyz">Contact</a>
-  <a href="/privacy">Privacy</a>
+  <!-- <a href="/privacy">Privacy</a> -->
 </div>
 
 <style>
