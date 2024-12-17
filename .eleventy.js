@@ -16,7 +16,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"./client-side-compiled/**/*": "scripts"});
   eleventyConfig.addPassthroughCopy({"./styles-compiled/**/*": "styles"});
   
-  //eleventyConfig.addPassthroughCopy({"./src/copy-to-root/*": "."});
+  eleventyConfig.addPassthroughCopy({"./src/copy-to-root/*": "."});
 
   /* If you have any libs being pulled from node_modules you might do it like below */
   //eleventyConfig.addPassthroughCopy({"./node_modules/swiper/*swiper-bundle.min.js": "scripts/libs"});
