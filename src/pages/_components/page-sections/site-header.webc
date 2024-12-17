@@ -2,7 +2,10 @@
   <div id="header-center-bar-top-bg"></div>
   <div id="header-center-bar-bg">
     <div id="header-center-bar">
-      <site-logo></site-logo>
+      <a href="/" title="Home">
+        <site-logo></site-logo>
+      </a>
+      
       <site-nav></site-nav>
     </div>
   </div>
@@ -37,6 +40,10 @@
     margin: 0 auto;
     max-width: var(--spacing-max-content-width);
     margin-top: -10px;
+
+    a { 
+      display: block;
+    }
   }
 }
 

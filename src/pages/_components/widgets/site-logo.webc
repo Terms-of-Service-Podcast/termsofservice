@@ -1,1 +1,7 @@
 <img src="/img/tos-logo.png" class="site-logo">
+
+<style scoped>
+  .site-logo {
+    height: 100%;
+  }
+</style>
