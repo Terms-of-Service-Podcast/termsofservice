@@ -14,3 +14,8 @@ Static site for the Terms of Service podcast website. Generated with [Eleventy](
 - Download source code from [GitHub](https://github.com/marycamacho/termsofservice) to a local directory.
 - Install dependencies with `npm install` or `yarn install`.
 - Run `npm run dev` or `yarn dev` to start the development server.
+
+## Tools
+To test the episode pages these tools are helpful
+- https://www.linkedin.com/post-inspector/
+- https://developers.facebook.com/tools/debug/sharing/
