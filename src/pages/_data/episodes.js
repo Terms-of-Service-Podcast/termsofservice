@@ -1,5 +1,5 @@
 import reallysimple from "reallysimple";
-import { format, intervalToDuration } from "date-fns";
+import { format, intervalToDuration, addSeconds } from "date-fns";
 
 const feedUrl = "https://podcast.termsofservice.xyz/json";
 
@@ -10,13 +10,13 @@ async function readFeed(url) {
   return data;
 }
 
-function formatDuration(seconds) {
-  const duration = intervalToDuration({ start: 0, end: seconds * 1000 });
-  if (!duration.hours) {
-    return `${duration.minutes}:${duration.seconds}`;
-  } 
-
-  return `${duration.hours}:${duration.minutes}:${duration.seconds}`;
+function formatTimeFromSeconds(seconds) {
+  const helperDate = addSeconds(new Date(0), seconds);
+  if (seconds >= 3600) {
+    return format(helperDate, 'h:mm:ss');
+  }
+  
+  return format(helperDate, 'mm:ss');
 }
 
 function parseFeed(feed) {
@@ -37,7 +37,7 @@ function parseFeed(feed) {
       pageSlug,
       mp3Url: item.attachments[0].url,
       duration: item.attachments[0].duration_in_seconds,
-      durationFormatted: formatDuration(item.attachments[0].duration_in_seconds)
+      durationFormatted: formatTimeFromSeconds(item.attachments[0].duration_in_seconds)
     };
   });
 
