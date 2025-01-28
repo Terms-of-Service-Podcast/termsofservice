@@ -26,13 +26,9 @@ Cloudflare to redeploy the site. The steps are:
 - Login to `https://dash.cloudflare.com/login` with a login that has access to admin the TOS site (I use `mary@termsofservice.xyz`)
 - Once logged in, in the same browser, put `https://dash.cloudflare.com/52ade2308bac0e96e89e4e762c2a398f/pages/view/termsofservice` in the address
   and press `enter`. The result should look like this:
-  ![Cloudflare TOS Admin](readme-assets/cloudflare-tos-admin.png)  
-  
+  ![Cloudflare TOS Admin](readme-assets/cloudflare-tos-admin.png) 
 
-- In the top section marked `Production` Click on the `View Details` link:
-  ![View Details link](readme-assets/cloudflare-tos-view-details.png)  
-  
-
+- In the image above click on the circled `View Details` link.
 - In the top right, click on the `Manage Deploy` and then on `Retry deployment`.
   ![Retry Deploy Link](readme-assets/cloudflare-tos-redeploy.png)  
 
