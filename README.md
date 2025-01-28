@@ -28,8 +28,8 @@ Cloudflare to redeploy the site. The steps are:
   and press `enter`. The result should look like this:
   ![Cloudflare TOS Admin](readme-assets/cloudflare-tos-admin.png) 
 
-- In the image above click on the circled `View Details` link.
-- In the top right, click on the `Manage Deploy` and then on `Retry deployment`.
+- Click on the circled `View Details` link. (see image above)
+- Then, in the top right, click on the circled `Manage Deploy` and then on `Retry deployment`.
   ![Retry Deploy Link](readme-assets/cloudflare-tos-redeploy.png)  
 
 
