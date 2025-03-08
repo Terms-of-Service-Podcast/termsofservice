@@ -24,7 +24,7 @@ To test the episode pages these tools are helpful
 The site is hosted on Cloudflare. When a new episode is published or something is edited in the microfeed system, you have to tell
 Cloudflare to redeploy the site. The steps are:  
 - Login to `https://dash.cloudflare.com/login` with a login that has access to admin the TOS site (I use `mary@termsofservice.xyz`)
-- Once logged in, in the same browser, put `https://dash.cloudflare.com/52ade2308bac0e96e89e4e762c2a398f/pages/view/termsofservice` in the address
+- Once logged in, in the same browser, put `https://dash.cloudflare.com/52ade2308bac0e96e89e4e762c2a398f/pages/view/termsofservice-website` in the address
   and press `enter`. The result should look like this:
   ![Cloudflare TOS Admin](readme-assets/cloudflare-tos-admin.png) 
 
